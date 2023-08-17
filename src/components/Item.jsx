@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Item = (props) => {
-    if (props.item.bigger === true) {
+    if (props.item.bigger) {
         if (props.item.numbered) {
             return (
             <div className="itemHandler">
@@ -11,11 +11,10 @@ const Item = (props) => {
         } else {
             return (
             <ul iv className="itemHandler">
-                <li className="itemComment">{props.item.content}</li>
+                <li className="itemComment"><strong>{props.item.content}</strong></li>
             </ul>
             );
         }
-        
     } else {
         if (props.item.numbered) {
             return (
